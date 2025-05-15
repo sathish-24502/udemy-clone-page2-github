@@ -3,7 +3,9 @@
   padding: 0;
 }
 
-
+.body{
+  font-family: 'Times New Roman', Times, serif;
+}
 
 .navbar {
   padding: 10px;
@@ -29,7 +31,7 @@
   border: solid black 1px;
   border-radius: 30px;
   width: 60%;
-  display: flex;
+  display: flex; 
   gap: 10px;
   align-items: center;
 
@@ -51,7 +53,14 @@
   display: flex;
   gap: 10px;
   align-items: center;
+  
 
+}
+.navbar__s3-coures , .navbar__s3 i {
+  cursor: pointer;
+}
+.navbar__s3-menu{
+  display: none;
 }
 
 .mylearning {
@@ -78,7 +87,12 @@
   padding: 20px;
   border-bottom: solid black 1px;
   justify-content: space-between;
+  cursor: pointer;
 }
+.navbar__s4 p:hover{
+  background-color: white;
+  color: black;
+    }
 
 .navbar__s4 p {
   background-color: #A435F0;
@@ -106,7 +120,9 @@
 }
 
 .navbar-s6__card {
-  width: 300px;
+  flex-grow: 1;
+  flex-basis: 20%;
+  margin: 5px;
 }
 
 .navbar-s6__card img {
@@ -176,3 +192,38 @@
 .Details p {
   margin: 10px;
 }
+
+/* media quaries */
+
+@media screen and (max-width:800px) {
+  body{
+  font-size: 10px;
+}
+
+}
+
+@media screen and (min-width:600px){
+  .navbar__s3-icons{
+    display: flex;
+    justify-content: space-between;
+      }
+   .navbar__s3-icons{
+    gap: 10px;
+   }   
+}
+
+@media screen and (max-width:500px){
+.navbar-s6__card{
+  flex-basis: 40%;
+}
+.navbar__s3-menu{
+    display: block;
+  }
+  .navbar__s4{
+    display: none;
+  }
+  .navbar__s3-coures,.mylearning,.mylearning__popup,.navbar__s3-icons{
+    display: none;
+  }
+}
+
